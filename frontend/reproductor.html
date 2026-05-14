@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix - Reproductor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reproductor.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <h1 class="logo">StreamFlix</h1>
+        </a>
+        <a href="index.html" class="btn-volver">Volver</a>
+    </header>
+
+    <main class="reproductor-main">
+        <section class="reproductor-contenido">
+            <div class="player-container">
+                <video id="player" controls preload="metadata">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+
+            <section class="info-video">
+                <h2 id="tituloVideo">Cargando...</h2>
+                <span class="badge-categoria" id="categoriaVideo"></span>
+                <p id="descripcionVideo"></p>
+            </section>
+
+            <section class="comentarios-seccion">
+                <h3>Comentarios</h3>
+
+                <form class="form-comentario" id="formComentario">
+                    <input type="text" id="inputAutor" placeholder="Tu nombre" required>
+                    <textarea id="inputContenido" placeholder="Escribe un comentario..." required></textarea>
+                    <button type="button" id="btnComentar">Comentar</button>
+                </form>
+
+                <ul class="lista-comentarios" id="listaComentarios"></ul>
+            </section>
+        </section>
+
+        <aside class="recomendaciones-aside">
+            <h3>Recomendados</h3>
+            <ul class="lista-recomendaciones" id="listaRecomendaciones"></ul>
+        </aside>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/reproductor.js"></script>
+</body>
+</html>
